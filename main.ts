@@ -17,7 +17,7 @@ let mySprite = sprites.create(img`
     . . . . . . f f f f d d d c . . 
     . . . . . . . . . . c c c . . . 
     `, SpriteKind.Player)
-let mySprite2 = sprites.create(img`
+let myEnemy = sprites.create(img`
     .............ccfff..............
     ...........ccddbcf..............
     ..........ccddbbf...............
@@ -34,4 +34,6 @@ let mySprite2 = sprites.create(img`
     ....fccc111fbdbbccdcc.....fbbf..
     ........ccccfcdbbcc........fff..
     .............fffff..............
-    `, SpriteKind.Player)
+    `, SpriteKind.Enemy)
+controller.moveSprite(mySprite)
+myEnemy.follow(mySprite)
