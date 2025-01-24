@@ -3,7 +3,9 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "Timers": "github:microsoft/arcade-timers#v1.1.0"
+        "Timers": "github:microsoft/arcade-timers#v1.1.0",
+        "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.18",
+        "arcade-tilemap-a-star": "github:jwunderl/arcade-tilemap-a-star#v0.4.0"
     },
     "files": [
         "main.blocks",
@@ -11,7 +13,9 @@
         "README.md",
         "assets.json",
         "tilemap.g.jres",
-        "tilemap.g.ts"
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
     ],
     "testFiles": [
         "test.ts"
