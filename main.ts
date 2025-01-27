@@ -48,7 +48,7 @@ game.splash("Hi, welcome to our game. You will use the arrow keys to try to esca
     shark = sprites.create(assets.image`myImage1`, SpriteKind.Enemy)
     tiles.placeOnTile(shark, tiles.getTileLocation(0, 1))
     game.onUpdateInterval(750, function () {
-    scene.followPath(shark, scene.aStar(shark.tilemapLocation(), fish.tilemapLocation()), 32.5)
+    scene.followPath(shark, scene.aStar(shark.tilemapLocation(), fish.tilemapLocation()), 32)
 })
 } else {
     game.splash("cmon")
