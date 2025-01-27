@@ -1,37 +1,55 @@
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    game.gameOver(false)
+})
+let time = ""
+let shark: Sprite = null
+let fish: Sprite = null
+game.splash("press space a lil")
+let play = game.ask("Do you want to play?")
+if (play = true) {
+    controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     Render.toggleViewMode()
+    
 })
-function start (bool: boolean, Do_you_want_to_go_into_3D_mode_right_now: string) {
-	
+sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
+    game.setGameOverMessage(false, "GAME OVER!")
+})
+game.splash("Hi, welcome to our game. You will use the arrow keys to try to escape from the ALDI monster.")
+    game.splash("Use \"ENTER\" to switch between 3D and 2D modes.")
+    time = game.askForString("Do you want to have a countdown?", 3)
+    if (time == "yes") {
+        info.startCountdown(30)
+    } else {
+        game.splash("Have fun!")
+    }
+    tiles.setCurrentTilemap(tilemap`level2`)
+    Render.setViewMode(ViewMode.tilemapView)
+    Render.moveWithController(2, 3, 0)
+    fish = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
+    fish = Render.getRenderSpriteVariable()
+    scene.cameraFollowSprite(fish)
+    shark = sprites.create(assets.image`myImage1`, SpriteKind.Enemy)
+    tiles.placeOnTile(shark, tiles.getTileLocation(0, 1))
+    game.onUpdateInterval(750, function () {
+    scene.followPath(shark, scene.aStar(shark.tilemapLocation(), fish.tilemapLocation()), 32.5)
+})
+} else {
+    game.splash("cmon")
 }
-game.showLongText("Hi, welcome to our game. You will use the arrow keys to try to escape from the ALDI monster.", DialogLayout.Bottom)
-game.showLongText("Use \"B\" to switch between 3D and 2D modes.", DialogLayout.Bottom)
-start(true, "")
-tiles.setCurrentTilemap(tilemap`level2`)
-Render.setViewMode(ViewMode.tilemapView)
-Render.moveWithController(2, 3, 0)
-let fish = sprites.create(img`
-    . . . . . . . . c c c c . . . . 
-    . . . . . . c c d d d d c . . . 
-    . . . . . c c c c c c d c . . . 
-    . . . . c c 4 4 4 4 d c c . c c 
-    . . . c 4 d 4 4 4 4 4 1 c c 4 c 
-    . . c 4 4 4 1 4 4 4 4 d 1 c 4 f 
-    . c 4 4 4 4 1 4 4 4 4 4 1 4 4 f 
-    f 4 4 4 4 4 1 1 c f 4 4 1 f 4 f 
-    f 4 4 4 f 4 1 c 4 f 4 4 1 f 4 f 
-    f 4 4 4 4 4 1 4 4 f 4 4 d f f f 
-    . f 4 4 4 4 1 c c 4 4 d f f . . 
-    . . f f 4 d 4 4 4 4 4 c f . . . 
-    . . . . f f 4 4 4 4 c d b c . . 
-    . . . . . . f f f f d d d c . . 
-    . . . . . . . . . . c c c . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
-scene.cameraFollowSprite(fish)
-let shark = sprites.create(assets.image`myImage1`, SpriteKind.Enemy)
-controller.moveSprite(fish, 100, 100)
-tiles.placeOnTile(shark, tiles.getTileLocation(0, 1))
-game.onUpdateInterval(500, function () {
-    scene.followPath(shark, scene.aStar(shark.tilemapLocation(), fish.tilemapLocation()), 75)
-})
