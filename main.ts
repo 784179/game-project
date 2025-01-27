@@ -1,14 +1,14 @@
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    Render.toggleViewMode()
+})
 function start (bool: boolean, Do_you_want_to_go_into_3D_mode_right_now: string) {
-    if (dimension = true) {
-        Render.setViewMode(ViewMode.raycastingView)
-        Render.moveWithController(2, 3, 0)
-    } else {
-        Render.setViewMode(ViewMode.tilemapView)
-        Render.moveWithController(0, 0, 0)
-    }
+	
 }
+game.showLongText("Hi, welcome to our game. You will use the arrow keys to try to escape from the ALDI monster.", DialogLayout.Bottom)
+game.showLongText("Use \"B\" to switch between 3D and 2D modes.", DialogLayout.Bottom)
 start(true, "")
 tiles.setCurrentTilemap(tilemap`level2`)
+Render.setViewMode(ViewMode.tilemapView)
 Render.moveWithController(2, 3, 0)
 let fish = sprites.create(img`
     . . . . . . . . c c c c . . . . 
@@ -33,5 +33,5 @@ let shark = sprites.create(assets.image`myImage1`, SpriteKind.Enemy)
 controller.moveSprite(fish, 100, 100)
 tiles.placeOnTile(shark, tiles.getTileLocation(0, 1))
 game.onUpdateInterval(500, function () {
-    scene.followPath(shark, scene.aStar(shark.tilemapLocation(), fish.tilemapLocation()), 100)
+    scene.followPath(shark, scene.aStar(shark.tilemapLocation(), fish.tilemapLocation()), 75)
 })
