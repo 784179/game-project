@@ -2,8 +2,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     game.gameOver(false)
 })
 let time = ""
-let shark: Sprite = null
 let fish: Sprite = null
+let shark: Sprite = null
 game.splash("press space a lil")
 let play = game.ask("Do you want to play?")
 if (play = true) {
@@ -48,7 +48,7 @@ game.splash("Hi, welcome to our game. You will use the arrow keys to try to esca
     shark = sprites.create(assets.image`myImage1`, SpriteKind.Enemy)
     tiles.placeOnTile(shark, tiles.getTileLocation(0, 1))
     game.onUpdateInterval(750, function () {
-    scene.followPath(shark, scene.aStar(shark.tilemapLocation(), fish.tilemapLocation()), 32)
+    scene.followPath(shark, scene.aStar(shark.tilemapLocation(), fish.tilemapLocation()), 34)
 })
 } else {
     game.splash("cmon")

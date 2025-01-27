@@ -13,20 +13,6 @@
         ],
         "displayName": "level1"
     },
-    "level2": {
-        "id": "level2",
-        "mimeType": "application/mkcd-tilemap",
-        "data": "MTAxMDAwMTAwMDAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjA1MDMwMzAxMDIwMzAzMDMwMzAzMDMwMzAzMDMwMzAyMDIwMjAzMDIwMjAzMDEwMjAyMDMwMTAyMDMwMjAzMDMwMzAyMDMwMjAyMDMwMjA0MDIwMzAyMDIwMzAyMDIwMjAzMDIwMzAyMDIwMzAyMDIwMjAzMDMwMzAzMDMwMzAzMDMwMjAzMDIwMzAzMDIwMjAyMDMwMTAyMDMwMTAyMDIwMzAyMDMwMjAyMDMwMjAzMDIwMjA0MDIwMzAyMDUwMjAzMDIwMzAyMDIwMzAyMDMwMzAyMDUwMjAzMDIwNTAyMDMwMjAzMDMwMzAzMDIwMzAzMDMwMjAyMDMwMjA0MDIwMzAyMDMwMTAyMDIwMjAzMDIwMzAzMDMwMzAyMDIwMjAzMDIwMzAyMDIwMjAyMDMwMjAyMDIwMjAyMDIwMjAyMDMwMzAzMDMwMzAzMDMwMzAzMDMwMjAzMDMwMzAzMDIwMzAzMDIwMzAzMDEwMjAzMDEwMjAyMDMwMjAzMDMwMzAzMDMwMjAyMDMwMjAyMDMwMjAyMDIwMjAyMDMwMTAyMDIwMzAyMDIwMzAzMDMwMzAzMDMwMzAzMDMwMzAyMDUwNTAzMDMwMzAzMDIwMjAyMDIwMjAyMDIwMjAyMDIwNTA0MjIyMjIyMjIyMjIyMjIyMjAwMjIwMDAwMDAwMDAwMjIwMjIyMjAyMjIwMDIwMjAwMDIyMjIwMjIyMDAyMjIwMjAyMjIyMDIyMDAwMDAwMDAwMjAyMjAyMjIwMDIyMjAyMDIyMjIwMjAyMjAyMjIwMjAyMjIyMDAwMjIwMjIyMDIwMjAwMjAwMDIwMDIyMjAyMDIyMjIyMjAwMDAwMjIwMjAyMjIyMjIwMjIyMjIyMDIwMDAwMDAwMDIwMDAwMDAyMjAwMDIyMjAyMjIwMDAwMDIwMDIyMjIwMjIyMjIwMjIyMDAyMDAwMDAwMDAyMDIyMDAwMDIyMjIyMjIyMjIyMg==",
-        "tileset": [
-            "myTiles.transparency16",
-            "sprites.dungeon.hazardLava0",
-            "sprites.dungeon.hazardLava1",
-            "sprites.dungeon.collectibleInsignia",
-            "sprites.dungeon.floorDark3",
-            "sprites.dungeon.floorDark1"
-        ],
-        "displayName": "level2"
-    },
     "level3": {
         "id": "level3",
         "mimeType": "application/mkcd-tilemap",
@@ -53,6 +39,20 @@
             "myTiles.transparency16"
         ],
         "displayName": "level5"
+    },
+    "level2": {
+        "id": "level2",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjA1MDMwMzAxMDIwMzAzMDMwMzAzMDMwMzAzMDMwMzAyMDIwMjAzMDIwMjAzMDEwMjAyMDMwMTAyMDMwMjAzMDMwMzAyMDMwMjAyMDMwMjA0MDIwMzAyMDIwMzAyMDIwMjAzMDIwMzAyMDIwMzAyMDIwMjAzMDMwMzAzMDMwMzAzMDMwMjAzMDIwMzAzMDIwMjAyMDMwMTAyMDMwMTAyMDIwMzAyMDMwMjAyMDMwMjAzMDIwMjA0MDIwMzAyMDUwMjAzMDIwMzAyMDIwMzAyMDMwMzAyMDUwMjAzMDIwNTAyMDMwMjAzMDMwMzAzMDIwMzAzMDMwMjAyMDMwMjA0MDIwMzAyMDMwMTAyMDIwMjAzMDIwMzAzMDMwMzAyMDIwMjAzMDIwMzAyMDIwMjAyMDMwMjAyMDIwMjAyMDIwMjAyMDMwMzAzMDMwMzAzMDMwMzAzMDMwMzAzMDMwMzAzMDIwMzAzMDIwMzAzMDEwMjAzMDEwMjAyMDMwMjAzMDMwMzAzMDMwMjAyMDMwMjAyMDMwMjAyMDIwMjAyMDMwMTAyMDIwMzAyMDIwMzAzMDMwMzAzMDMwMzAzMDMwMzAyMDUwNTAzMDMwMzAzMDIwMjAyMDIwMjAyMDIwMjAyMDIwNTA0MjIyMjIyMjIyMjIyMjIyMjAwMjIwMDAwMDAwMDAwMjIwMjIyMjAyMjIwMDIwMjAwMDIyMjIwMjIyMDAyMjIwMjAyMjIyMDIyMDAwMDAwMDAwMjAyMjAyMjIwMDIyMjAyMDIyMjIwMjAyMjAyMjIwMjAyMjIyMDAwMjIwMjIyMDIwMjAwMjAwMDIwMDIyMjAyMDIyMjIyMjAwMDAwMjIwMjAyMjIyMjIwMjIyMjIyMDIwMDAwMDAwMDAwMDAwMDAyMjAwMDIyMjAyMjIwMDAwMDIwMDIyMjIwMjIyMjIwMjIyMDAyMDAwMDAwMDAyMDIyMDAwMDIyMjIyMjIyMjIyMg==",
+        "tileset": [
+            "myTiles.transparency16",
+            "sprites.dungeon.hazardLava0",
+            "sprites.dungeon.hazardLava1",
+            "sprites.dungeon.collectibleInsignia",
+            "sprites.dungeon.floorDark3",
+            "sprites.dungeon.floorDark1"
+        ],
+        "displayName": "level2"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
